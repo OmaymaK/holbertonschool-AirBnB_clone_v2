@@ -8,12 +8,15 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello_hbnb():
+    """ hello hbnb """
     return "Hello HBNB!"
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
+    """ hbnb """
     return "HBNB"
 @app.route("/c/<string:text>", strict_slashes=False)
 def cisfun(text):
+    """ cisfun """
     text = text.replace('_', ' ')
     return f'C {text}'
 
