@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Flask Web App """
+"""Flask Web App."""
 
 from markupsafe import escape
 from flask import Flask
@@ -8,15 +8,19 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello_hbnb():
-    """ hello hbnb """
+    """Hello hbnb."""
     return "Hello HBNB!"
+
+
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    """ hbnb """
+    """Hbnb."""
     return "HBNB"
+
+
 @app.route("/c/<string:text>", strict_slashes=False)
 def cisfun(text):
-    """ cisfun """
+    """Cisfun."""
     text = text.replace('_', ' ')
     return f'C {text}'
 
