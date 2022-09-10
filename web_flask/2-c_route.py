@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Flask Web App """
 
+from markupsafe import escape
 from flask import Flask
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ def hbnb():
     return "HBNB"
 @app.route("/c/<string:text>", strict_slashes=False)
 def cisfun(text):
-    return f"C {text}"
+    return f'C {text}'
 
 
 if __name__ == "__main__":
